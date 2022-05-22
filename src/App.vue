@@ -9,14 +9,21 @@ import Home from "./components/Home.vue";
 </template>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #010e3a;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: white;
   margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
+  height: 100%;
 }
 </style>
