@@ -41,7 +41,8 @@ const setTime = () => {
   const date = new Date();
   const year = date.getFullYear();
   const month = format(date.getMonth() + 1);
-  const day = format(date.getDay());
+  const day = format(date.getDate());
+
   const weeks = new Array(
     "星期日",
     "星期一",
@@ -74,7 +75,6 @@ header {
   padding: px(15) px(80);
   > div {
     font-size: px(14);
-    color: white;
     > span {
       margin-right: px(16);
     }
