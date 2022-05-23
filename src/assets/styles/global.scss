@@ -32,8 +32,9 @@ ul {
       0 13px 0 -12px #375482, 0 -13px 0 -12px #375482;
   }
   .title {
-    display: block;
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: $color-highlight;
     font-size: px(16);
   }

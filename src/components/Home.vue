@@ -1,7 +1,10 @@
 <template>
   <TopBar></TopBar>
   <main>
-    <section id="left"><TodayAlert></TodayAlert></section>
+    <section id="left">
+      <TodayAlert></TodayAlert>
+      <NetworkAlert></NetworkAlert>
+    </section>
     <section id="middle"></section>
     <section id="right"></section>
   </main>
@@ -10,6 +13,7 @@
 <script setup lang="ts">
 import TopBar from "./TopBar.vue";
 import TodayAlert from "./panels/TodayAlert.vue";
+import NetworkAlert from "./panels/NetworkAlert.vue";
 </script>
 
 <style lang="scss" scoped>
