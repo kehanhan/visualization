@@ -1,6 +1,8 @@
 <template>
   <div class="panel">
-    <header><span class="title">今日重点人预警数</span></header>
+    <header class="title">
+      <span>今日重点人预警数</span>
+    </header>
     <div class="quick-view">
       <div class="block" v-for="(value, key) in kindsData" :key="key">
         <span class="category">{{ key }}</span>
@@ -8,7 +10,10 @@
       </div>
     </div>
     <div class="detail sub-panel">
-      <header><span class="subtitle">重点人预警详情</span></header>
+      <header class="subtitle">
+        <span>重点人预警详情</span>
+        <More></More>
+      </header>
       <ol>
         <li class="item" v-for="(item, index) in personTop5" :key="index">
           <span class="index">{{ index + 1 }}</span>
@@ -22,7 +27,10 @@
       </ol>
     </div>
     <div class="space sub-panel">
-      <header class="subtitle">管控人在重点场所活跃度<span></span></header>
+      <header class="subtitle">
+        <span>管控人在重点场所活跃度</span>
+        <More></More>
+      </header>
       <ol>
         <li class="item" v-for="(item, index) in activityTop6" :key="index">
           <span class="index">{{ index + 1 }}</span>
@@ -37,6 +45,7 @@
 </template>
 
 <script setup lang="ts">
+import More from "../More.vue";
 import { ref } from "vue";
 
 const kindsData = ref({
@@ -170,7 +179,8 @@ const activityTop6 = ref([
   align-items: center;
   justify-content: space-between;
   margin-bottom: px(6);
-  height: px(16);
+  height: px(14);
+  line-height: px(14);
   > span {
     height: 100%;
     overflow: hidden;
@@ -180,7 +190,7 @@ const activityTop6 = ref([
 .detail {
   height: px(134);
   overflow: hidden;
-  margin-bottom: px(12);
+  margin-bottom: px(10);
   > ol {
     margin: px(10) px(6);
     .date {
@@ -203,7 +213,7 @@ const activityTop6 = ref([
   }
 }
 .space {
-  height: px(160);
+  height: px(150);
   overflow: hidden;
   ol {
     margin: px(12) px(6);

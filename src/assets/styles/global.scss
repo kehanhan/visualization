@@ -18,6 +18,19 @@ ul {
 }
 .panel {
   padding: px(8) px(12) px(12);
+  border: 1px solid white;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    // border: 1px solid yellow;
+    box-shadow: 13px 0 0 -12px #375482, -13px 0 0 -12px #375482,
+      0 13px 0 -12px #375482, 0 -13px 0 -12px #375482;
+  }
   .title {
     display: block;
     text-align: left;
@@ -26,8 +39,9 @@ ul {
   }
   .subtitle {
     display: flex;
-    padding-left: px(6);
+    justify-content: space-between;
     align-items: center;
+    padding: 0 px(6);
     color: $color-highlight;
     font-size: px(12);
     height: px(12);
